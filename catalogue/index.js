@@ -36,3 +36,5 @@ app.post('/products', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Catalogue service running on http://localhost:${PORT}`);
 });
+
+module .exports = app; // Exporter l'application pour les tests
