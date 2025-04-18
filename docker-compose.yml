@@ -1,0 +1,17 @@
+version: '3'
+services:
+  catalogue:
+    image: openjdk:17
+    volumes:
+      - ./catalogue/target/catalogue.jar:/app/catalogue.jar
+    command: ["java", "-jar", "/app/catalogue.jar"]
+    ports:
+      - "8081:8081"
+
+  commande:
+    image: openjdk:17
+    volumes:
+      - ./commande/target/commande.jar:/app/commande.jar
+    command: ["java", "-jar", "/app/commande.jar"]
+    ports:
+      - "8082:8082"
